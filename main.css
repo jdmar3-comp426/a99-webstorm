@@ -1,3 +1,24 @@
+.login
+{
+    background-image: url('css/wp2180140.jpeg'); 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-size: cover;
+}
+.login_main
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 350px;
+    bottom: 0;
+    text-align: center;
+}
+.login_main h1
+{
+padding: 10px;
+color:green;
+}
 .game
 {
     width: 1080px;
