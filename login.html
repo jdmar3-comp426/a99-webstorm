@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Login Page</title> 
+        <style>
+.login
+{
+    background:#4caf4fde; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-size: cover;
+}
+.login_main
+{
+    position: absolute;
+    left: 40px;
+    right: 0;
+    top: 80px;
+    bottom: 0;
+    text-align: center;
+}
+.login_main h1
+{
+color:#e3c08b;
+margin-top: 200px;
+font-size: 60px;
+}
+
+form 
+{
+    /* Center the form on the page */
+    margin: auto;
+    width: 400px;
+    padding:300px;
+    align-content: center;
+    
+    }
+
+
+    
+ul{
+    list-style: none;
+    }
+
+.form
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 60px;
+    bottom: 0;
+    text-align: center;
+}
+
+input[type=text]:focus {
+    background-color: lightblue;
+  }
+
+.play {
+    background-color: #006600;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.return {
+    background-color: #f1ed12b6;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.register{
+    background-color: #0d0e0dde;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+input
+{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+label
+{
+    font-size: 40px;
+    font-style: normal;
+    font-family: fantasy;
+    }
+
+        </style>
+    </head>
+    <body class="login">
+        <div class="login_main">
+            <h1>BlackJack</h1>
+        </div>
+        <div class="form">
+            <form action="/login" method="post">
+                <ul>
+                    <li>
+                        <label for="usrnm">username:</label><br>
+                        <input type="text" id="usrnm" name="username"><br>
+                    </li><br>
+                    <li>
+                        <label for="psswrd">password:</label><br>
+                        <input type="text" id="psswrd" name="password"><br><br>
+                    </li><br>
+                    <li class="button">
+                        <button class="play" type="submit" value="login" >Play</button><br><br>
+                        <button class="register" type="submit" value="signup" formaction="/signup" formmethod="get">Don't have an account? Get one!</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <script src="server.js"></script>
+    </body>
+</html>
