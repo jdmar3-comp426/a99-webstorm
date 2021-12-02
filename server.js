@@ -7,7 +7,7 @@ var db = require("./database.js")
 // Start server
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-const HTTP_PORT = 3508;
+const HTTP_PORT = 3511;
 app.listen(HTTP_PORT, () => {
     console.log(`This app is listening on port ${HTTP_PORT}`)
 });
