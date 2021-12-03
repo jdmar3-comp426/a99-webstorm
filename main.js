@@ -143,7 +143,6 @@
             if (points > 21) {
                 points -= aces * 10;
             }
-            
             players[player].Points = points;
             return points;
         }
