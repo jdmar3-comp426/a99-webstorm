@@ -14,8 +14,8 @@ if (row === undefined) {
     console.log('Your database appears to be empty. I will initialize it now.');
 // Set a const that will contain your SQL commands to initialize the database.
     const sqlInit = `
-        CREATE TABLE accountinfo ( id INTEGER PRIMARY KEY , username TEXT, password TEXT,emailAddress TEXT, highestScore INTEGER, numOfGames INTEGER );
-		INSERT INTO acountinfo (username, password,highestScore,numOfGames) VALUES ('admin','000106','123@321.com',0,0)
+        CREATE TABLE accountinfo ( id INTEGER PRIMARY KEY , username TEXT, password TEXT,emailAddress TEXT, recentLogin TEXT, numOfGames INTEGER );
+		INSERT INTO accountinfo (username, password,emailAddress, recentLogin,numOfGames) VALUES ('admin','000106','123@321.com','0000-00-00',0)
     `;
 // Execute SQL commands that we just wrote above.
     db.exec(sqlInit);

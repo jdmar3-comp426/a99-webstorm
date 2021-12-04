@@ -61,7 +61,6 @@ function shuffle() {
         var location1 = Math.floor((Math.random() * deck.length));
         var location2 = Math.floor((Math.random() * deck.length));
         var tmp = deck[location1];
-
         deck[location1] = deck[location2];
         deck[location2] = tmp;
     }
@@ -74,7 +73,7 @@ function startblackjack() {
     createDeck();
     shuffle();
     createPlayers(2);
-    createPlayersUI(1);
+    createPlayersUI();
     dealHands();
     document.getElementById('player_' + currentPlayer).classList.add('active');
 }

@@ -37,12 +37,13 @@ app.get('/server.js', (req, res) => {
 })
 
 app.post("/login", (req, res) => {
-    console.log(req.body.username+" "+req.body.pass);
     const confirmInfo = db.prepare("SELECT EXISTS(SELECT 1 from accountinfo where username = ? and password = ?)").get(req.body.username, req.body.password);
-    console.log(confirmInfo);
 	if(confirmInfo['EXISTS(SELECT 1 from accountinfo where username = ? and password = ?)']==1){
-        const numOfGames = db.prepare("SELECT numOfGames from accountinfo where username = ? and password =?").run(req.body.username, req.body.password);
-        const stmt = db.prepare("UPDATE accountinfo SET numOfGames = ? WHERE username = ?").run(numOfGames+1, req.body.username);
+        const numOfGames = db.prepare("SELECT * from accountinfo where username = ?").get(req.body.username);
+        console.log(numOfGames.numOfGames);
+        let today = new Date().toISOString().slice(0, 10)
+        const stmt = db.prepare("UPDATE accountinfo SET numOfGames = ?, recentLogin = ? WHERE username = ?");
+        const info2 = stmt.run(numOfGames.numOfGames+1, today, req.body.username);
         return res.redirect('/game');
     }
     else{
@@ -61,8 +62,8 @@ app.post("/signup", (req, res) => {
         return res.redirect('/alreadyexists');
     }
     else{
-        const stmt = db.prepare("INSERT INTO accountinfo (username, password, emailAddress) VALUES (?,?,?)");
-        const info = stmt.run(req.body.username, req.body.password, req.body.email);
+        const stmt = db.prepare("INSERT INTO accountinfo (username, password, emailAddress, recentLogin,numOfGames) VALUES (?,?,?,?,?)");
+        const info = stmt.run(req.body.username, req.body.password, req.body.email,0,0);
         return res.redirect('/login');
     }
 });
