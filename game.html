@@ -12,23 +12,37 @@
 <body>
     <div class="game">
         <h3>Blackjack</h2>
+        
+        <br>
+            
+        <section class="right-half">
 
-        <div class="game-options">
-            <input type="button" id="btnStart" class="btn" value="Play" onclick="startblackjack()">
-            <input type="button" class="btn" value="Hit Me" onclick="hitMe()">
-            <input type="button" class="btn" value="Stand" onclick="stay()">
-        </div>
+            <div id="deck" class="deck">
+                <div id="deckcount">52</div>
+            </div>
 
-        <div class="status" id="status"></div>
+            <br>
 
-        <div id="deck" class="deck">
-            <div id="deckcount">52</div>
-        </div>
+            <div class="game-options">
+                <input type="button" id="btnStart" class="btn" value="Play" onclick="startblackjack()">
+                <input type="button" class="btn" value="Hit Me" onclick="hitMe()">
+                <input type="button" class="btn" value="Stand" onclick="stay()">
+            </div>
+    
+        </section>
 
-        <div id="players" class="players">
-        </div>
+        <section class="left-half">
 
+            <div id="players" class="players"></div>
+
+            <br>
+            
+            <div class="status" id="status"></div>
+        </section>
+        
             <div class="clear"></div>
+        
+      
     </div>
     <script src="main.js">  </script>
     <script src="server.js"></script>

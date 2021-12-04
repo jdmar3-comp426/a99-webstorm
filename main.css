@@ -64,6 +64,7 @@
 
 .game .game-options {
   text-align: center;
+  width: 0px;
 }
 .game .card {
   width: 50px;
@@ -84,10 +85,11 @@
   background: gold;
   border: solid 5px white;
   border-radius: 10px;
-  padding: 5px 20px;
-  margin: 0 auto;
+  padding: 10px;
+  margin: 10px;
   margin-top: 10px;
   display: none;
+  width: 200px;
 }
 
 .players {
@@ -120,12 +122,12 @@
 }
 
 .deck {
-  float: right;
   background: white;
   color: #222;
   padding: 10px;
   border-radius: 10px;
   border: double 5px;
+  width: 250px;
 }
 
 form {
@@ -201,4 +203,15 @@ label {
 .returnPage {
   width: 1080px;
   margin: 0 auto;
+}
+
+.left-half {
+  float: left;
+  width: 50%;
+  margin-left: 280px;
+}
+
+.right-half {
+  float: right;
+  width: 30%;
 }
