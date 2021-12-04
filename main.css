@@ -19,6 +19,11 @@
   margin-top: 140px;
   font-size: 60px;
 }
+
+.gh {
+  background: #61b68c;
+}
+
 .game {
   background: #61b68c;
   text-align: center;
@@ -54,6 +59,7 @@
   font-family: Georgia, "Times New Roman", Times, serif;
   padding: 10px;
   color: white;
+  margin: 0;
 }
 
 .game .game-options {
