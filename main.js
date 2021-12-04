@@ -4,6 +4,7 @@ var deck = new Array();
 var players = new Array();
 var currentPlayer = 0;
 
+
 function createDeck() {
     deck = new Array();
     for (var i = 0; i < values.length; i++) {
@@ -54,6 +55,7 @@ function createPlayersUI() {
 //     //     var npc = { Name: 'Robot ' + i, ID: i, Points: 0, Hand: hand };
 //     //     players.push(npc);
 }
+
 
 function shuffle() {
     //switch the position of two random cards for 10,000 times
@@ -116,11 +118,11 @@ function getCardUI(card) {
 }
 
 // returns the number of points that a player has in hand
-function getPoints(player) {
+function getPoints(player_id) {
     var points = 0;
     var aces = 0;
-    for (var i = 0; i < players[player].Hand.length; i++) {
-        var curPoint = players[player].Hand[i].Weight;
+    for (var i = 0; i < players[player_id].Hand.length; i++) {
+        var curPoint = players[player_id].Hand[i].Weight;
         points += curPoint;
         if (curPoint == 11) {
             aces++;
@@ -129,7 +131,7 @@ function getPoints(player) {
     if (points > 21) {
         points -= aces * 10;
     }
-    players[player].Points = points;
+    players[player_id].Points = points;
     return points;
 }
 
