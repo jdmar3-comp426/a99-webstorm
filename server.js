@@ -20,6 +20,10 @@ app.get('/login', (req, res) => {
     return res.sendFile(__dirname + '/login.html');
 });
 
+app.get('/wp2180140.jpeg', (req, res) => {
+    return res.sendFile(__dirname + '/wp2180140.jpeg')
+})
+
 app.get('/main.css', (req, res) => {
     return res.sendFile(__dirname + '/main.css')
 })
@@ -34,9 +38,11 @@ app.get('/server.js', (req, res) => {
 
 app.post("/login", (req, res) => {
     console.log(req.body.username+" "+req.body.pass);
-    const confirmInfo = db.prepare("SELECT EXISTS(SELECT 1 from accountinfo where username = ? and password = ?)").get(req.body.username,req.body.password);
+    const confirmInfo = db.prepare("SELECT EXISTS(SELECT 1 from accountinfo where username = ? and password = ?)").get(req.body.username, req.body.password);
     console.log(confirmInfo);
 	if(confirmInfo['EXISTS(SELECT 1 from accountinfo where username = ? and password = ?)']==1){
+        const numOfGames = db.prepare("SELECT numOfGames from accountinfo where username = ? and password =?").run(req.body.username, req.body.password);
+        const stmt = db.prepare("UPDATE accountinfo SET numOfGames = ? WHERE username = ?").run(numOfGames+1, req.body.username);
         return res.redirect('/game');
     }
     else{

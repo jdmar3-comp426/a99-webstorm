@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .login
 {
-    background-image: url('css/wp2180140.jpeg'); 
+    background-image: url('/wp2180140.jpeg'); 
     opacity: 20;
     background-repeat: no-repeat; 
     background-attachment: fixed; 
@@ -11,7 +11,7 @@
 {
     position: relative;
     left: 10px;
-    top: 0px;
+    top: 170px;
     bottom: 0;
     text-align: center;
 }
@@ -24,20 +24,30 @@ font-size: 60px;
 }
 .game
 {
-    width: 1080px;
-    border: solid 1px #ddd;
-    margin: 0 auto;
-   background: #35654d;
-border: solid 10px;
+   background: #61b68c;
 text-align:center;
-min-height:720px;
+min-height: 1080px;
 }
 
 .btn{
-    border:none;
-    padding: 10px 30px;
-    border-radius:10px;
+  background-color: #94ac95;
+  text-align: center;
+  display: inline-block;
+  font-size: 25px;
     cursor:pointer;
+    width: 250px;
+    display: block;
+    margin: 10px;
+    position: relative;
+    left: 70%;
+    font-family: fantasy;
+    
+}
+
+.btn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 .btn:hover{
@@ -46,14 +56,10 @@ min-height:720px;
 
 .game h3
 {
+    font-size: 80px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 padding: 10px;
-background:black;
 color:white;
-}
-
-.game .game-body
-{
-padding: 20px;
 }
 
 .game .game-options
@@ -125,21 +131,16 @@ text-align: center;
     border: double 5px;
 }
 
-.btn
-{
-    background:#222;
-    color:white !important;
-    border-radius:0px;
-}
-
 form 
 {
     /* Center the form on the page */
     margin: auto;
     width: 400px;
-    padding:300px;
+    padding:100px;
     align-content: center;
-    
+    position: relative;
+    top: 60px;
+    text-align: center;
     }
 
 
@@ -148,13 +149,6 @@ ul{
     list-style: none;
     }
 
-.form
-{
-    position: relative;
- 
-    bottom: 300px;
-    text-align: center;
-}
 
 input[type=text]:focus {
     background-color: lightblue;
@@ -200,10 +194,10 @@ input
     position: relative;
     left: 0;
     right: 0;
-    top: 150px;
+    top: 250px;
     bottom: 0;
     text-align: center;
-    background-image: url('css/wp2180140.jpeg'); 
+    background-image: url('/wp2180140.jpeg'); 
     background-repeat: no-repeat; 
     background-attachment: fixed; 
     background-size: cover; 
