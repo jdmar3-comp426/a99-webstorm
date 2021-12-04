@@ -49,11 +49,6 @@ function createPlayersUI() {
         div_player.appendChild(div_points);
         document.getElementById('players').appendChild(div_player);
     }
-//     // players = new Array();
-//     // for (var i = 1; i <= num; i++) {
-//     //     var hand = new Array();
-//     //     var npc = { Name: 'Robot ' + i, ID: i, Points: 0, Hand: hand };
-//     //     players.push(npc);
 }
 
 
