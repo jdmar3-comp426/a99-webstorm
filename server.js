@@ -1,4 +1,5 @@
 // Define app using express
+
 const express = require('express');
 const app = express();
 // Require database SCRIPT file
@@ -18,6 +19,18 @@ app.get('/', (req, res) => {
 app.get('/login', (req, res) => {
     return res.sendFile(__dirname + '/login.html');
 });
+
+app.get('/main.css', (req, res) => {
+    return res.sendFile(__dirname + '/main.css')
+})
+
+app.get('/main.js', (req, res) => {
+    return res.sendFile(__dirname + '/main.js')
+})
+
+app.get('/server.js', (req, res) => {
+    return res.sendFile(__dirname + '/server.js')
+})
 
 app.post("/login", (req, res) => {
     console.log(req.body.username+" "+req.body.pass);
