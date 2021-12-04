@@ -22,12 +22,22 @@ function createDeck() {
 
 function createPlayers(num) {
     players = new Array();
+
+
     for (var i = 1; i <= num; i++) {
         var hand = new Array();
         var player = { Name: 'Player ' + i, ID: i, Points: 0, Hand: hand };
         players.push(player);
     }
+
+    var robothand = new Array();
+    var robotplayer = { Name: 'Player ' + "Robot", ID: "Robot", Points: 0, Hand: robothand };
+    players.push(robotplayer);
+
 }
+
+
+
 
 function createPlayersUI() {
     document.getElementById('players').innerHTML = '';
@@ -74,10 +84,11 @@ function startblackjack() {
     currentPlayer = 0;
     createDeck();
     shuffle();
-    createPlayers(2);
+    createPlayers(1);
     createPlayersUI();
     dealHands();
     document.getElementById('player_' + currentPlayer).classList.add('active');
+    // robotrun();
 }
 
 function dealHands() {
@@ -154,12 +165,34 @@ function hitMe() {
     check();
 }
 
-function stay() {
-    // move on to next player, if any
+function robotrun() {
+    while (getPoints(1) < 16) {
+        hitMe();   
+    }
+
     if (currentPlayer != players.length - 1) {
         document.getElementById('player_' + currentPlayer).classList.remove('active');
         currentPlayer += 1;
         document.getElementById('player_' + currentPlayer).classList.add('active');
+      
+    }
+
+    else {
+        end();
+    }
+}
+
+function stay() {
+    // move on to next player, if any
+    // when move on to the robot, may run robotrun()
+    if (currentPlayer != players.length - 1) {
+        document.getElementById('player_' + currentPlayer).classList.remove('active');
+        currentPlayer += 1;
+        document.getElementById('player_' + currentPlayer).classList.add('active');
+
+        if (currentPlayer == 1) {
+            robotrun();
+        }
     }
 
     else {
