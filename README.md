@@ -36,7 +36,7 @@ You will be prompted to index page (also our login page). If you already have re
 
 ## Game code comments
 
-[See here](/docs/code_comments .pdf)
+[See here](/docs/code_comments.pdf)
 
 ## Dependency List
 * better-sqlite3
