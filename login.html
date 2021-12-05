@@ -11,7 +11,7 @@
             <h1>BlackJack</h1>
         </div>
         <div class="form">
-            <form action="/login" method="post">
+            <form action="/app/login" method="post">
                 <ul>
                     <li>
                         <label for="usrnm">username:</label><br>
@@ -23,7 +23,9 @@
                     </li><br>
                     <li class="button">
                         <button class="play" type="submit" value="login" onclick="setStorage()">Play</button><br><br>
-                        <button class="register" type="submit" value="signup" formaction="/signup" formmethod="get">Don't have an account? Get one!</button>
+                        <button class="register" type="submit" value="signup" formaction="/app/signup" formmethod="get">Don't have an account? Get one!</button>
+                        <button class="changeInfo" type="submit" value="signup" formaction="/app/changeInfo" formmethod="get">Want to change the username or password?</button>
+                        <button class="changeInfo" type="submit" value="signup" formaction="/app/destroy" formmethod="post">Want to delete this account?</button>
                     </li>
                 </ul>
             </form>

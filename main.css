@@ -5,6 +5,8 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  position: relative;
+  top: 30%;
 }
 .login_main {
   position: relative;
@@ -14,7 +16,7 @@
   text-align: center;
 }
 .login_main h1 {
-  color: #000000;
+  color: #0c8334;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin-top: 140px;
   font-size: 60px;
@@ -169,6 +171,15 @@ input[type="text"]:focus {
   background-color: #0d0e0dde;
   color: white;
   padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.changeInfo {
+  background-color: #0d0e0dde;
+  color: white;
+  padding: 8px 32px;
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;

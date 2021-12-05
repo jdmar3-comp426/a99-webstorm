@@ -3,14 +3,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <title>Register Page</title> 
+        <title>ChangeYourInfo Page</title> 
         <link rel="stylesheet" type="text/css" href="./main.css" />
     </head>
     <body class="signup">
-        <form action="/app/signup" class="form" method="post">
+        <form action="/app/changeInfo" class="form" method="post">
             <ul >
                 <li>
-                    <label for="usrnm">username:</label><br>
+                    <label for="usrnm">The current username:</label><br>
                     <input type="text" id="usrnm" name="username"><br>
                 </li>
                 <li>
@@ -18,8 +18,12 @@
                     <input type="text" id="psswrd" name="password"><br>
                 </li>
                 <li>
-                    <label for="email">Email address:</label><br>
-                    <input type="email" id="email" name="email"><br><br><br>
+                    <label for="usrnm2">new username:</label><br>
+                    <input type="text" id="usrnm2" name="username_new"><br>
+                </li>
+                <li>
+                    <label for="psswrd2">new password:</label><br>
+                    <input type="text" id="psswrd2" name="password_new"><br><br><br>
                 </li>
                 <li>
                     <button class="play" type="submit">Confirm</button>
