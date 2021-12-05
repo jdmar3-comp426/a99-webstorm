@@ -43,6 +43,15 @@ app.get('/app/server.js', (req, res) => {
     return res.sendFile(__dirname + '/server.js')
 })
 
+app.get('/app/game/main.css', (req, res) => {
+    return res.sendFile(__dirname + '/main.css')
+})
+
+app.get('/app/game/server.js', (req, res) => {
+    return res.sendFile(__dirname + '/server.js')
+})
+
+
 app.post("/app/login", (req, res) => {
     const confirmInfo = db.prepare("SELECT EXISTS(SELECT 1 from accountinfo where username = ? and password = ?)").get(req.body.username, req.body.password);
 	if(confirmInfo['EXISTS(SELECT 1 from accountinfo where username = ? and password = ?)']==1){
@@ -108,6 +117,10 @@ app.post('/app/destroy', (req, res) => {
 	const info = stmt.run(req.body.username);
     }
 );
+
+app.get('/app/game/pi', (req, res) => {
+    return res.sendFile(__dirname + '/pi.html');
+});
 
 app.use(function(req, res){
     res.status(404);

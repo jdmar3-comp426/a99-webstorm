@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Personal Info</title> 
+        <link rel="stylesheet" type="text/css" href="./main.css" />
+        <style>
+           body {background-color:#13c51391;}
+        </style>
+    </head>
+    <body>
+        <div class="returnPage">
+            <p style="font-size: 30px;">Your username is：</p><br>
+            <p id="one"></p><br>
+            <p style="font-size: 30px;">Your password is:</p><br>
+            <p id="two"></p><br>
+            <button class="return" type="submit" onclick="retrieveInfo()" value="Return">Display</button>
+            <button class="return" type="submit" onclick="location.href='/app/game';" value="Return">Return</button>
+        </div>
+        <script src="server.js"></script>
+        <script>
+            function retrieveInfo () {
+                var username = localStorage.getItem("username");
+                var password = localStorage.getItem("password");
+                document.getElementById("one").innerHTML = username;
+                document.getElementById("two").innerHTML = password;
+            }
+            
+        </script>
+    </body>
+</html>

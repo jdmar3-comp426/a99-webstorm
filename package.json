@@ -15,7 +15,6 @@
     "server": "node server.js",
     "start": "concurrently --kill-others 'npm run client' 'npm run server'"
   },
-  "proxy": "http://localhost:8080",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jdmar3-comp426/a99-webstorm.git"
@@ -24,7 +23,7 @@
     "blackjack"
   ],
   "author": "webstorm team",
-  "license": "ISC",
+  "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/jdmar3-comp426/a99-webstorm/issues"
   },

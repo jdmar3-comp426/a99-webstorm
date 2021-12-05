@@ -1,24 +1,55 @@
-# a99 Blackjack
+# Blackjack
 
-A simple blackjack game.
+Welcome to this simplified version of BlackJack! It's a universally known card game in which you will be using a deck of 52 cards to compete the dealer. You and dealer(robot) will each get an initial hand of two cards to start. The J K Q will each acount for 10 points and A will be regarded as 11 (not 1 for this simplified version). You can choose either to hit one card (get one from the deck) or stand with what you have in hands. Winner is the one with higher total points but not exceeding 21, which it will bust and lose. You will need to have an account to enjoy this game. 
+
+## Our team member(Github username)
+
+YaochenS 
+
+Burushuijiaoba
+
+RichardChiqui 
+
+MichaelEJT
+
+ricop14
+
+## Planing
+
+[see here](/docs/Planning.pdf)
 
 ## Login
 
-You will be prompted to log in with a username and password. If you already have login info you can sign in, otherwise you can signup using the signup button. After logging in, you will be prompted to the gameplay page. 
+You will be prompted to index page (also our login page). If you already have registered before you can sign in or change the username/password or even delete your account(Please no), otherwise you can have your account(Exciting!) using the signup button. After logging in, you will be prompted to the gameplay page. 
 
-## Gameplay
-You will see three buttons: Play, Hitme, and Stand. To start the game, press Play, and you will be dealt two hands. The goal of this blackjack game is to get as close to 21 points as possible without getting over 21 points. An ace is worth 11 or 1 point, whichever is best for your interest. An king, queen, jack, and ten is worth 10 points, and other cards are worth their individual points. If you believe that you need another card, press hitme and you will be dealt another card. Otherwise, press stand and you will be manipulating the behaviors of the second hand. Similarly, press hitme if you want another card, and stand if you don't. The highest score of the two hands that's not over 21 will be added to the scoreboard. You can restart the game by pressing the restart button.
+## Database
+
+[See here](/docs/database.md)
+
+## How to run
+
+[See User Instrcutions](/docs/user_instructions.pdf)
+
+## Video Clips
+
+[Youtube link](https://youtu.be/oIggSdOKtkc)
+
+## Game code comments
+
+[See here](/docs/code_comments .pdf)
 
 ## Dependency List
 * better-sqlite3
 * browser-sync
 * concurrently
 * express
-* md5
 
-## [API Endpoints](/docs/endpoints.md)
+## API Endpoints
+[See here](/docs/endpoints.md)
+We have used a lot of endpoints to do logic work such as storing or changing user informations. We have also used endpoints to realize functions such as sendFile or redirect.
 * Login
 * Signup
+* Personal Information
 * User Entered Wrong Login
 * User Info Already Exists
 * Game

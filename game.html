@@ -16,6 +16,7 @@
         <br>
             
         <section class="right-half">
+            
 
             <div id="deck" class="deck">
                 <div id="deckcount">52</div>
@@ -28,6 +29,12 @@
                 <input type="button" class="btn" value="Hit Me" onclick="hitMe()">
                 <input type="button" class="btn" value="Stand" onclick="stay()">
             </div>
+        
+            <br>
+            
+            <button  class="return" onclick="location.href='/app/game/pi';" value="Personal Info">Personal Info</button> 
+
+            
     
         </section>
 
@@ -40,17 +47,12 @@
             <div class="status" id="status"></div>
         </section>
         
-            <div class="clear"></div>
+        <div class="clear"></div>
         
       
     </div>
     <script src="main.js">  </script>
     <script src="server.js"></script>
-    <script>
-        function getUser() {
-            let user = localStorage.getItem('username');
-        }
-    </script>
 </body>
 
 </html>

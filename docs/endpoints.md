@@ -1,31 +1,31 @@
-# Endpoints
+We have a lot of endpoints which merely redirect and provide files. I will list some endpoints that have other functions.
 
-## Login
+## Login Page
 
-**URL** : `/login`
+**Endpoints** : Post `/app/login`
 
-Requests username and password to log in and allows for signup if new user. Checks if user data already exists in database. Redirects to `/game` if data exists, redirects to `/signup` to register new user, redirects to `/wronginformation` if not login info not found.
+Requests username and password to log in. Checks if user data already exists in database. Redirects to `/app/game` if data exists and this user will have his/her numOfGames and lastLogin attributes update, redirects to `/app/signup` to register new user, redirects to `/app/wronginformation` if not login info not found.
 
-## Signup
+**Endpoints** : Post `/app/changeInfo`
 
-**URL** : `/signup`
+Allow users to change their username or/and password without influencing their other attributes.
 
-Allows users to register username and password into database. If info already exists in database, redirects to `/alreadyexists`. Otherwise redirects to `/login`.
+**Endpoints** : Post `/app/destroy`
 
-## User entered wrong login
+Will delete the account information related to certain username.
 
-**URL** : `/wronginformation`
+## Signup Page
 
-Informs user that user data cannot be found in database, redirects to `/login`.
+**Endpoints** : Post `/app/signup`
 
-## User info already exists
-
-**URL** : `/alreadyexists`
-
-Informs user that entered signup information already exists in database.  Redirects to `/signup`.
+Allows users to register username, password, and email address into database. If the username or email address already exist in database, redirects to `/app/alreadyexists`. If the account successfully registered, it will redirect user to to `/app/login`.
 
 ## Game
 
-**URL** : `/game`
+**Endpoints** : Get `/app/game`
 
 Main game page. Accessible after successful log in.
+
+**Endpoints** : Get `/app/game/pi`
+
+Allow users to check their username and password once entered into the game page.
