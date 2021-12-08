@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Error1</title> 
+        <style>
+           body {background-color:#13c51391;}
+
+form 
+{
+    /* Center the form on the page */
+    margin: auto;
+    width: 400px;
+    padding:300px;
+    align-content: center;
+    
+    }
+
+
+    
+ul{
+    list-style: none;
+    }
+
+.form
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 60px;
+    bottom: 0;
+    text-align: center;
+}
+
+.return {
+    background-color: #f1ed12b6;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.register{
+    background-color: #0d0e0dde;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+input
+{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+label
+{
+    font-size: 40px;
+    font-style: normal;
+    font-family: fantasy;
+    }
+
+.returnPage
+{
+    width: 1080px;
+    margin: 0 auto;
+}
+        </style>
+    </head>
+    <body>
+        <div class="returnPage">
+            <p style="font-size: 60px;">The Username or Email already exists. Please retry.</p><br>
+            <button class="return" type="submit" onclick="location.href='/app/signup';" value="Return">Return</button> 
+        </div>
+        <script src="server.js"></script>
+    </body>
+</html>

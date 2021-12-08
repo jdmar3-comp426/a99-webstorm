@@ -1,0 +1,228 @@
+@charset "UTF-8";
+.login {
+  background-image: url("/wp2180140.jpeg");
+  opacity: 20;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  top: 30%;
+}
+.login_main {
+  position: relative;
+  left: 10px;
+  top: 17px;
+  bottom: 0;
+  text-align: center;
+}
+.login_main h1 {
+  color: #0c8334;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-top: 140px;
+  font-size: 60px;
+}
+
+.gh {
+  background: #61b68c;
+}
+
+.game {
+  background: #61b68c;
+  text-align: center;
+  min-height: 1080px;
+}
+
+.btn {
+  background-color: #94ac95;
+  text-align: center;
+  display: inline-block;
+  font-size: 25px;
+  cursor: pointer;
+  width: 250px;
+  display: block;
+  margin: 10px;
+  position: relative;
+  left: 70%;
+  font-family: fantasy;
+}
+
+.btn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.btn:hover {
+  background: rgb(30, 221, 255);
+}
+
+.game h3 {
+  font-size: 80px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 10px;
+  color: white;
+  margin: 0;
+}
+
+.game .game-options {
+  text-align: center;
+  width: 0px;
+}
+.game .card {
+  width: 50px;
+  height: 80px;
+  padding: 10px;
+  border: solid 1px #808080;
+  background-color: white;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 10pt;
+  text-align: center;
+  margin: 3px;
+  border: solid 3px;
+}
+
+.game .status {
+  display: inline-block;
+  background: gold;
+  border: solid 5px white;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  margin-top: 10px;
+  display: none;
+  width: 200px;
+}
+
+.players {
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.player {
+  width: 40%;
+  border: solid 5px #f5f5f5;
+  border-radius: 10px;
+  padding: 10px;
+  display: inline-block;
+  margin: 1%;
+  vertical-align: top;
+  background: #f5f5f5;
+}
+
+.player.active {
+  border: solid 5px rgb(211, 42, 20);
+}
+
+.points {
+  text-align: center;
+  font-size: 30pt;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.deck {
+  background: white;
+  color: #222;
+  padding: 10px;
+  border-radius: 10px;
+  border: double 5px;
+  width: 250px;
+}
+
+form {
+  /* Center the form on the page */
+  margin: auto;
+  width: 400px;
+  align-content: center;
+  position: relative;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+input[type="text"]:focus {
+  background-color: lightblue;
+}
+
+.play {
+  background-color: #4caf4fde;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.return {
+  background-color: #f1ed12b6;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.register {
+  background-color: #0d0e0dde;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.changeInfo {
+  background-color: #0d0e0dde;
+  color: white;
+  padding: 8px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.signup {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 150px;
+  bottom: 0;
+  text-align: center;
+  background-image: url("/wp2180140.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+label {
+  font-size: 40px;
+  font-style: normal;
+  font-family: fantasy;
+}
+
+.returnPage {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+.left-half {
+  float: left;
+  width: 50%;
+  margin-left: 280px;
+}
+
+.right-half {
+  float: right;
+  width: 30%;
+}

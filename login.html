@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Login Page</title> 
+        <link rel="stylesheet" type="text/css" href="./main.css" />
+    </head>
+    <body class="login">
+        <div class="login_main">
+            <h1>BlackJack</h1>
+        </div>
+        <div class="form">
+            <form action="/app/login" method="post">
+                <ul>
+                    <li>
+                        <label for="usrnm">username:</label><br>
+                        <input type="text" id="usrnm" name="username"><br>
+                    </li><br>
+                    <li>
+                        <label for="psswrd">password:</label><br>
+                        <input type="text" id="psswrd" name="password"><br><br>
+                    </li><br>
+                    <li class="button">
+                        <button class="play" type="submit" value="login" onclick="setStorage()">Play</button><br><br>
+                        <button class="register" type="submit" value="signup" formaction="/app/signup" formmethod="get">Don't have an account? Get one!</button>
+                        <button class="changeInfo" type="submit" value="signup" formaction="/app/changeInfo" formmethod="get">Want to change the username or password?</button>
+                        <button class="changeInfo" type="submit" value="signup" formaction="/app/destroy" formmethod="post">Want to delete this account?</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <script src="server.js"></script>
+        <script>
+            function setStorage () {
+                localStorage.setItem("username", document.getElementById('usrnm').value);
+                localStorage.setItem("password", document.getElementById('psswrd').value);
+            }
+        </script>
+    </body>
+</html>
